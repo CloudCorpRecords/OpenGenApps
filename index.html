@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frontend Code Generator</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <div class="container">
@@ -15,12 +16,16 @@
             <label for="description">Describe what you want to build:</label><br>
             <textarea id="description" placeholder="E.g., Generate HTML and CSS for a webpage with a button that changes color on hover."></textarea><br>
             <button id="generateButton">Generate Code</button>
+            <button id="downloadButton" style="display: none;">Download Code</button>
+            <button id="embedButton" style="display: none;">Generate Embed Code</button>
 
             <h2>Generated Website:</h2>
             <iframe id="outputFrame"></iframe>
+            <div id="embedCodeContainer" style="display: none;">
+                <h2>Embed Code:</h2>
+                <textarea id="embedCode" readonly></textarea>
+            </div>
         </main>
     </div>
-
-    <script src="script.js"></script>
 </body>
 </html>
