@@ -1,174 +1,188 @@
-/* style.css */
-
+/* General body styles for the webpage */
 body {
-    font-family: 'Roboto', sans-serif;
-    background: linear-gradient(to right, #000428, #004e92);
-    color: #ffffff;
-    margin: 0;
-    padding: 0;
+    font-family: 'Roboto', sans-serif; /* Set the font to Roboto, with a fallback to sans-serif */
+    background: linear-gradient(to right, #000428, #004e92); /* Background gradient from dark blue to lighter blue */
+    color: #ffffff; /* Set text color to white */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
 }
 
+/* Container styles to center and constrain the main content */
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-    max-width: 1000px;
-    margin: auto;
+    display: flex; /* Flexbox for layout */
+    flex-direction: column; /* Column layout */
+    align-items: center; /* Center items horizontally */
+    padding: 10px; /* Inner padding */
+    max-width: 1000px; /* Maximum width */
+    margin: auto; /* Center container */
 }
 
+/* Header styles */
 header {
-    width: 100%;
-    text-align: center;
-    padding: 15px 0;
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-    margin-bottom: 15px;
+    width: 100%; /* Full width */
+    text-align: center; /* Center text */
+    padding: 15px 0; /* Vertical padding */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    border-radius: 10px; /* Rounded corners */
+    margin-bottom: 15px; /* Space below the header */
 }
 
+/* Main heading (h1) styles */
 h1 {
-    font-size: 2em;
-    margin: 0;
-    color: #00c6ff;
-    text-shadow: 2px 2px 10px rgba(0, 198, 255, 0.5);
+    font-size: 2em; /* Font size */
+    margin: 0; /* Remove margin */
+    color: #00c6ff; /* Light blue text color */
+    text-shadow: 2px 2px 10px rgba(0, 198, 255, 0.5); /* Light blue shadow */
 }
 
+/* Main content area styles */
 main {
-    width: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-    padding: 15px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    width: 100%; /* Full width */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    border-radius: 10px; /* Rounded corners */
+    padding: 15px; /* Inner padding */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Drop shadow */
 }
 
+/* Label styles */
 label {
-    font-size: 1.1em;
-    text-align: center;
+    font-size: 1.1em; /* Font size */
+    text-align: center; /* Center text */
 }
 
+/* Textarea styles */
 textarea {
-    width: 100%;
-    min-height: 100px;
-    max-height: 300px;    
-    border-radius: 5px;
-    border: 1px solid #00c6ff;
-    background: rgba(0, 0, 0, 0.7);
-    color: #ffffff;
-    margin-bottom: 10px;
-    font-size: 1em;
-    resize: vertical;
-    text-align: left;
+    width: 100%; /* Full width */
+    min-height: 100px; /* Minimum height */
+    max-height: 300px; /* Maximum height */
+    border-radius: 5px; /* Rounded corners */
+    border: 1px solid #00c6ff; /* Light blue border */
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    color: #ffffff; /* White text */
+    margin-bottom: 10px; /* Space below textarea */
+    font-size: 1em; /* Font size */
+    resize: vertical; /* Allow vertical resizing */
+    text-align: left; /* Left-align text */
 }
 
+/* Button container styles */
 .button-container {
-    position: relative;
-    display: inline-block;
-    margin-right: 10px;
+    position: relative; /* Position relative for dropdown */
+    display: inline-block; /* Inline block layout */
+    margin-right: 10px; /* Space to the right */
 }
 
+/* Button styles */
 button {
-    background: #00c6ff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1.1em;
-    border-radius: 5px;
-    color: #ffffff;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    margin-top: 10px;
-    text-align: center;
+    background: #00c6ff; /* Light blue background */
+    border: none; /* No border */
+    padding: 10px 20px; /* Inner padding */
+    font-size: 1.1em; /* Font size */
+    border-radius: 5px; /* Rounded corners */
+    color: #ffffff; /* White text */
+    cursor: pointer; /* Pointer cursor */
+    transition: background 0.3s ease; /* Smooth background change */
+    margin-top: 10px; /* Space above button */
+    text-align: center; /* Center text */
 }
 
+/* Button hover effect */
 button:hover {
-    background: #005f8d;
+    background: #005f8d; /* Darker blue on hover */
 }
 
+/* Secondary heading (h2) styles */
 h2 {
-    font-size: 1.6em;
-    margin-top: 15px;
-    text-align: center;
+    font-size: 1.6em; /* Font size */
+    margin-top: 15px; /* Space above heading */
+    text-align: center; /* Center text */
 }
 
+/* iFrame styles */
 iframe {
-    width: 100%;
-    height: 300px;
-    border: 1px solid #00c6ff;
-    border-radius: 5px;
-    margin-top: 10px;
-    background: rgba(0, 0, 0, 0.7);
-    overflow-x: hidden;
+    width: 100%; /* Full width */
+    height: 300px; /* Fixed height */
+    border: 1px solid #00c6ff; /* Light blue border */
+    border-radius: 5px; /* Rounded corners */
+    margin-top: 10px; /* Space above iframe */
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    overflow-x: hidden; /* Hide horizontal overflow */
 }
 
+/* Responsive styles for larger screens */
 @media (min-width: 768px) {
     .container {
-        padding: 20px;
+        padding: 20px; /* Increase padding */
     }
 
     header {
-        padding: 20px 0;
-        margin-bottom: 20px;
+        padding: 20px 0; /* Increase vertical padding */
+        margin-bottom: 20px; /* Increase space below header */
     }
 
     h1 {
-        font-size: 2.5em;
+        font-size: 2.5em; /* Increase font size */
     }
 
     main {
-        padding: 20px;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        padding: 20px; /* Increase padding */
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Increase shadow size */
     }
 
     label {
-        font-size: 1.2em;
-        text-align: center;
+        font-size: 1.2em; /* Increase font size */
+        text-align: center; /* Center text */
     }
 
     button {
-        font-size: 1.2em;
-        text-align: center;
+        font-size: 1.2em; /* Increase font size */
+        text-align: center; /* Center text */
     }
 
     h2 {
-        font-size: 1.8em;
-        margin-top: 20px;
-        text-align: center;
+        font-size: 1.8em; /* Increase font size */
+        margin-top: 20px; /* Increase space above heading */
+        text-align: center; /* Center text */
     }
 
     iframe {
-        height: 400px;
+        height: 400px; /* Increase height */
     }
 }
 
-/* Download Menu Styles */
+/* Styles for the download menu */
 .download-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #333;
-    border-radius: 5px;
-    padding: 5px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    z-index: 1;
-    min-width: 150px;
+    display: none; /* Hidden by default */
+    position: absolute; /* Absolute positioning */
+    top: 100%; /* Position below button */
+    left: 0; /* Align to left */
+    background-color: #333; /* Dark background */
+    border-radius: 5px; /* Rounded corners */
+    padding: 5px 0; /* Vertical padding */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Drop shadow */
+    z-index: 1; /* Bring to front */
+    min-width: 150px; /* Minimum width */
 }
 
+/* Download menu link styles */
 .download-menu a {
-    display: block;
-    padding: 10px 20px;
-    color: #ffffff;
-    text-decoration: none;
-    transition: background 0.3s ease;
+    display: block; /* Block layout */
+    padding: 10px 20px; /* Inner padding */
+    color: #ffffff; /* White text */
+    text-decoration: none; /* Remove underline */
+    transition: background 0.3s ease; /* Smooth background change */
 }
 
+/* Download menu link hover effect */
 .download-menu a:hover {
-    background-color: #555;
+    background-color: #555; /* Darker background on hover */
 }
 
-/* Loading Indicator Styles */
+/* Loading indicator styles */
 .loading-indicator {
-    display: none;
-    text-align: center;
-    margin-top: 20px;
-    color: #ffffff;
+    display: none; /* Hidden by default */
+    text-align: center; /* Center text */
+    margin-top: 20px; /* Space above indicator */
+    color: #ffffff; /* White text */
 }
+
