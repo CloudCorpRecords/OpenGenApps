@@ -58,9 +58,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 iframeDocument.close();
 
                 // Show the download, embed, and preview buttons
-                downloadButton.style.display = 'inline-block';
-                embedButton.style.display = 'inline-block';
-                previewButton.style.display = 'inline-block';
+                if (downloadButton) downloadButton.style.display = 'inline-block';
+                if (embedButton) embedButton.style.display = 'inline-block';
+                if (previewButton) previewButton.style.display = 'inline-block';
             } else {
                 throw new Error('Invalid data received from the API');
             }
@@ -75,20 +75,26 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    downloadButton.addEventListener('click', () => {
-        download('generated.html', generatedHTML);
-    });
+    if (downloadButton) {
+        downloadButton.addEventListener('click', () => {
+            download('generated.html', generatedHTML);
+        });
+    }
 
-    embedButton.addEventListener('click', () => {
-        const embedCodeHTML = `<iframe srcdoc="${generatedHTML.replace(/"/g, '&quot;')}" width="100%" height="500" frameborder="0"></iframe>`;
-        embedCode.value = embedCodeHTML;
-        embedCodeContainer.style.display = 'block';
-    });
+    if (embedButton) {
+        embedButton.addEventListener('click', () => {
+            const embedCodeHTML = `<iframe srcdoc="${generatedHTML.replace(/"/g, '&quot;')}" width="100%" height="500" frameborder="0"></iframe>`;
+            if (embedCode) embedCode.value = embedCodeHTML;
+            if (embedCodeContainer) embedCodeContainer.style.display = 'block';
+        });
+    }
 
-    previewButton.addEventListener('click', () => {
-        const newTab = window.open();
-        newTab.document.open();
-        newTab.document.write(generatedHTML);
-        newTab.document.close();
-    });
+    if (previewButton) {
+        previewButton.addEventListener('click', () => {
+            const newTab = window.open();
+            newTab.document.open();
+            newTab.document.write(generatedHTML);
+            newTab.document.close();
+        });
+    }
 });
