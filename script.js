@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
         loadingIndicator.style.display = 'block';
 
         // Make a POST request to the server to generate HTML, CSS, and JS
-        fetch('https://buddhageminiserver.replit.app/generate', {
+        fetch('https://your-replit-server.replit.app/generate', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
