@@ -1,6 +1,5 @@
-// script.js
-
 document.addEventListener('DOMContentLoaded', () => {
+    // Get references to all the necessary DOM elements
     const generateButton = document.getElementById('generateButton');
     const downloadButton = document.getElementById('downloadButton');
     const embedButton = document.getElementById('embedButton');
@@ -15,17 +14,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const downloadCssLink = document.getElementById('downloadCssLink');
     const downloadJsLink = document.getElementById('downloadJsLink');
 
+    // Variables to store the generated content
     let generatedHTML = '';
     let separateHTML = '';
     let generatedCSS = '';
     let generatedJS = '';
 
+    // Function to decode HTML entities
     function decodeHTMLEntities(text) {
         const textarea = document.createElement('textarea');
         textarea.innerHTML = text;
         return textarea.value;
     }
 
+    // Function to handle file downloads
     function download(filename, text) {
         const element = document.createElement('a');
         element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
@@ -36,20 +38,21 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.removeChild(element);
     }
 
+    // Event listener for the "Generate" button
     generateButton.addEventListener('click', () => {
         const description = descriptionInput.value;
         console.log('Description:', description); // Debugging
 
+        // Initially hide buttons and show loading indicator
         embedCodeContainer.style.display = 'none';
         embedButton.style.display = 'none';
         hideEmbedButton.style.display = 'none'; // Initially hide hide button
         downloadButton.style.display = 'none';
         previewButton.style.display = 'none';
-
-        // Show loading indicator
         const loadingIndicator = document.getElementById('loadingIndicator');
         loadingIndicator.style.display = 'block';
 
+        // Make a POST request to the server to generate HTML, CSS, and JS
         fetch('https://buddhageminiserver.replit.app/generate', {
             method: 'POST',
             headers: {
@@ -141,6 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
         download('script.js', generatedJS);
     });
 
+    // Event listener for the "Embed" button
     embedButton.addEventListener('click', () => {
         const embedCodeHTML = `<iframe srcdoc="${generatedHTML.replace(/"/g, '&quot;')}" width="100%" height="500" frameborder="0"></iframe>`;
         embedCode.value = embedCodeHTML;
@@ -149,12 +153,14 @@ document.addEventListener('DOMContentLoaded', () => {
         hideEmbedButton.style.display = 'inline-block'; // Show hide button
     });
 
+    // Event listener for the "Hide Embed" button
     hideEmbedButton.addEventListener('click', () => {
         embedCodeContainer.style.display = 'none';
         hideEmbedButton.style.display = 'none';
         embedButton.style.display = 'inline-block'; // Show generate button again
     });
 
+    // Event listener for the "Preview" button
     previewButton.addEventListener('click', () => {
         const newTab = window.open();
         newTab.document.open();
