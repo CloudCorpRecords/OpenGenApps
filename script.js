@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const generateButton = document.getElementById('generateButton');
     const downloadButton = document.getElementById('downloadButton');
     const embedButton = document.getElementById('embedButton');
+    const previewButton = document.getElementById('previewButton');
     const descriptionInput = document.getElementById('description');
     const outputFrame = document.getElementById('outputFrame');
     const embedCodeContainer = document.getElementById('embedCodeContainer');
@@ -56,9 +57,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 iframeDocument.write(generatedHTML);
                 iframeDocument.close();
 
-                // Show the download and embed buttons
+                // Show the download, embed, and preview buttons
                 downloadButton.style.display = 'inline-block';
                 embedButton.style.display = 'inline-block';
+                previewButton.style.display = 'inline-block';
             } else {
                 throw new Error('Invalid data received from the API');
             }
@@ -81,5 +83,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const embedCodeHTML = `<iframe srcdoc="${generatedHTML.replace(/"/g, '&quot;')}" width="100%" height="500" frameborder="0"></iframe>`;
         embedCode.value = embedCodeHTML;
         embedCodeContainer.style.display = 'block';
+    });
+
+    previewButton.addEventListener('click', () => {
+        const newTab = window.open();
+        newTab.document.open();
+        newTab.document.write(generatedHTML);
+        newTab.document.close();
     });
 });
