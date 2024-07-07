@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
+
 <body>
     <div class="container">
         <header>
@@ -14,10 +16,19 @@
         </header>
         <main>
             <label for="description">Describe what you want to build:</label><br>
-            <textarea id="description" placeholder="E.g., Generate HTML and CSS for a webpage with a button that changes color on hover."></textarea><br>
+            <textarea id="description"
+                placeholder="E.g., Generate HTML and CSS for a webpage with a button that changes color on hover."></textarea><br>
             <button id="generateButton">Generate Code</button>
-            <button id="downloadButton" style="display: none;">Download Code</button>
+            <div class="button-container">
+                <button id="downloadButton" style="display: none;">Download Code</button>
+                <div id="downloadMenu" class="download-menu">
+                    <a id="downloadHtmlLink" href="#">Download HTML</a>
+                    <a id="downloadCssLink" href="#">Download CSS</a>
+                    <a id="downloadJsLink" href="#">Download JS</a>
+                </div>
+            </div>
             <button id="embedButton" style="display: none;">Generate Embed Code</button>
+            <button id="hideEmbedButton" style="display: none;">Hide Embed Code</button>
             <button id="previewButton" style="display: none;">Preview in New Tab</button>
 
             <h2>Generated Website:</h2>
@@ -26,7 +37,13 @@
                 <h2>Embed Code:</h2>
                 <textarea id="embedCode" readonly></textarea>
             </div>
+
+            <!-- Loading Indicator -->
+            <div id="loadingIndicator" class="loading-indicator">
+                Loading...
+            </div>
         </main>
     </div>
 </body>
+
 </html>
