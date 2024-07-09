@@ -1,7 +1,7 @@
 # Frontend App Generator 
 
 This is a simple web application that uses Google's Gemini API to generate HTML, CSS, and JavaScript code from natural language descriptions. 
-Demo: https://geminigenerative-cloudcorprecord.replit.app/
+Demo: https://opengenfrontend.replit.app
 
 ## Features
 
