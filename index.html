@@ -1,49 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <!-- Ensure the page is responsive on all devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Title of the web page -->
     <title>Frontend Code Generator</title>
-    <!-- Link to external CSS file -->
     <link rel="stylesheet" href="style.css">
-    <!-- Link to external JavaScript file, defer to load after HTML -->
     <script src="script.js" defer></script>
 </head>
+
 <body>
-    <!-- Main container for the web page content -->
     <div class="container">
-        <!-- Header section containing the title -->
         <header>
             <h1>Frontend Code Generator</h1>
         </header>
-        <!-- Main section containing the input form and output display -->
         <main>
-            <!-- Label and text area for user to describe their desired web page -->
             <label for="description">Describe what you want to build:</label><br>
-            <textarea id="description" placeholder="E.g., Generate HTML and CSS for a webpage with a button that changes color on hover."></textarea><br>
-            <!-- Button to trigger the code generation process -->
+            <textarea id="description"
+                placeholder="E.g., Generate HTML and CSS for a webpage with a button that changes color on hover."></textarea><br>
             <button id="generateButton">Generate Code</button>
-            <!-- Button to download the generated code, hidden by default -->
-            <button id="downloadButton" style="display: none;">Download Code</button>
-            <!-- Button to generate embed code for the generated web page, hidden by default -->
+            <div class="button-container">
+                <button id="downloadButton" style="display: none;">Download Code</button>
+                <div id="downloadMenu" class="download-menu">
+                    <a id="downloadHtmlLink" href="#">Download HTML</a>
+                    <a id="downloadCssLink" href="#">Download CSS</a>
+                    <a id="downloadJsLink" href="#">Download JS</a>
+                </div>
+            </div>
             <button id="embedButton" style="display: none;">Generate Embed Code</button>
-            <!-- Button to preview the generated web page in a new tab, hidden by default -->
+            <button id="hideEmbedButton" style="display: none;">Hide Embed Code</button>
             <button id="previewButton" style="display: none;">Preview in New Tab</button>
 
-            <!-- Section to display the generated web page -->
             <h2>Generated Website:</h2>
-            <!-- Iframe to show the generated web page -->
             <iframe id="outputFrame"></iframe>
-            <!-- Container for displaying the embed code, hidden by default -->
             <div id="embedCodeContainer" style="display: none;">
-                <!-- Header for the embed code section -->
                 <h2>Embed Code:</h2>
-                <!-- Text area to display the embed code, read-only -->
                 <textarea id="embedCode" readonly></textarea>
+            </div>
+
+            <!-- Loading Indicator -->
+            <div id="loadingIndicator" class="loading-indicator">
+                Loading...
             </div>
         </main>
     </div>
 </body>
+
 </html>
