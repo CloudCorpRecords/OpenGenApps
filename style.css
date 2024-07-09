@@ -1,188 +1,292 @@
-/* General body styles for the webpage */
+/* Basic Styling */
 body {
-    font-family: 'Roboto', sans-serif; /* Set the font to Roboto, with a fallback to sans-serif */
-    background: linear-gradient(to right, #000428, #004e92); /* Background gradient from dark blue to lighter blue */
-    color: #ffffff; /* Set text color to white */
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
+    /* Sets default font to Roboto, sans-serif */
+    font-family: 'Roboto', sans-serif;
+    /* Sets background to a linear gradient from #000428 to #004e92 */
+    background: linear-gradient(to right, #000428, #004e92);
+    /* Sets text color to white */
+    color: #ffffff;
+    /* Resets default margin */
+    margin: 0;
+    /* Resets default padding */
+    padding: 0;
 }
 
-/* Container styles to center and constrain the main content */
+/* Container Styles */
 .container {
-    display: flex; /* Flexbox for layout */
-    flex-direction: column; /* Column layout */
-    align-items: center; /* Center items horizontally */
-    padding: 10px; /* Inner padding */
-    max-width: 1000px; /* Maximum width */
-    margin: auto; /* Center container */
+    /* Enables flexbox layout */
+    display: flex;
+    /* Sets flex direction to column */
+    flex-direction: column;
+    /* Aligns items to the center */
+    align-items: center;
+    /* Adds padding to the container */
+    padding: 10px;
+    /* Sets maximum width of the container */
+    max-width: 1000px;
+    /* Centers the container horizontally */
+    margin: auto;
 }
 
-/* Header styles */
+/* Header Styles */
 header {
-    width: 100%; /* Full width */
-    text-align: center; /* Center text */
-    padding: 15px 0; /* Vertical padding */
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    border-radius: 10px; /* Rounded corners */
-    margin-bottom: 15px; /* Space below the header */
+    /* Sets width to 100% of the parent element */
+    width: 100%;
+    /* Centers text horizontally */
+    text-align: center;
+    /* Adds padding to the header */
+    padding: 15px 0;
+    /* Sets background to semi-transparent black */
+    background: rgba(0, 0, 0, 0.5);
+    /* Adds rounded corners */
+    border-radius: 10px;
+    /* Adds margin to the bottom */
+    margin-bottom: 15px;
 }
 
-/* Main heading (h1) styles */
+/* Heading 1 Styles */
 h1 {
-    font-size: 2em; /* Font size */
-    margin: 0; /* Remove margin */
-    color: #00c6ff; /* Light blue text color */
-    text-shadow: 2px 2px 10px rgba(0, 198, 255, 0.5); /* Light blue shadow */
+    /* Sets font size to 2em */
+    font-size: 2em;
+    /* Removes default margin */
+    margin: 0;
+    /* Sets text color to cyan */
+    color: #00c6ff;
+    /* Adds text shadow */
+    text-shadow: 2px 2px 10px rgba(0, 198, 255, 0.5);
 }
 
-/* Main content area styles */
+/* Main Section Styles */
 main {
-    width: 100%; /* Full width */
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    border-radius: 10px; /* Rounded corners */
-    padding: 15px; /* Inner padding */
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Drop shadow */
+    /* Sets width to 100% of the parent element */
+    width: 100%;
+    /* Sets background to semi-transparent black */
+    background: rgba(0, 0, 0, 0.5);
+    /* Adds rounded corners */
+    border-radius: 10px;
+    /* Adds padding to the main section */
+    padding: 15px;
+    /* Adds box shadow */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
-/* Label styles */
+/* Label Styles */
 label {
-    font-size: 1.1em; /* Font size */
-    text-align: center; /* Center text */
+    /* Sets font size to 1.1em */
+    font-size: 1.1em;
+    /* Centers text horizontally */
+    text-align: center;
 }
 
-/* Textarea styles */
+/* Textarea Styles */
 textarea {
-    width: 100%; /* Full width */
-    min-height: 100px; /* Minimum height */
-    max-height: 300px; /* Maximum height */
-    border-radius: 5px; /* Rounded corners */
-    border: 1px solid #00c6ff; /* Light blue border */
-    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
-    color: #ffffff; /* White text */
-    margin-bottom: 10px; /* Space below textarea */
-    font-size: 1em; /* Font size */
-    resize: vertical; /* Allow vertical resizing */
-    text-align: left; /* Left-align text */
+    /* Sets width to 100% of the parent element */
+    width: 100%;
+    /* Sets minimum height */
+    min-height: 100px;
+    /* Sets maximum height */
+    max-height: 300px;
+    /* Adds rounded corners */
+    border-radius: 5px;
+    /* Sets border to 1px solid cyan */
+    border: 1px solid #00c6ff;
+    /* Sets background to semi-transparent black */
+    background: rgba(0, 0, 0, 0.7);
+    /* Sets text color to white */
+    color: #ffffff;
+    /* Adds margin to the bottom */
+    margin-bottom: 10px;
+    /* Sets font size */
+    font-size: 1em;
+    /* Enables vertical resizing */
+    resize: vertical;
+    /* Aligns text to the left */
+    text-align: left;
 }
 
-/* Button container styles */
+/* Button Container Styles */
 .button-container {
-    position: relative; /* Position relative for dropdown */
-    display: inline-block; /* Inline block layout */
-    margin-right: 10px; /* Space to the right */
+    /* Sets position to relative */
+    position: relative;
+    /* Enables inline-block display */
+    display: inline-block;
+    /* Adds margin to the right */
+    margin-right: 10px;
 }
 
-/* Button styles */
+/* Button Styles */
 button {
-    background: #00c6ff; /* Light blue background */
-    border: none; /* No border */
-    padding: 10px 20px; /* Inner padding */
-    font-size: 1.1em; /* Font size */
-    border-radius: 5px; /* Rounded corners */
-    color: #ffffff; /* White text */
-    cursor: pointer; /* Pointer cursor */
-    transition: background 0.3s ease; /* Smooth background change */
-    margin-top: 10px; /* Space above button */
-    text-align: center; /* Center text */
+    /* Sets background color to cyan */
+    background: #00c6ff;
+    /* Removes default border */
+    border: none;
+    /* Adds padding to the button */
+    padding: 10px 20px;
+    /* Sets font size */
+    font-size: 1.1em;
+    /* Adds rounded corners */
+    border-radius: 5px;
+    /* Sets text color to white */
+    color: #ffffff;
+    /* Sets cursor to pointer */
+    cursor: pointer;
+    /* Adds transition effect for background color */
+    transition: background 0.3s ease;
+    /* Adds margin to the top */
+    margin-top: 10px;
+    /* Centers text horizontally */
+    text-align: center;
 }
 
-/* Button hover effect */
+/* Button Hover Styles */
 button:hover {
-    background: #005f8d; /* Darker blue on hover */
+    /* Changes background color on hover */
+    background: #005f8d;
 }
 
-/* Secondary heading (h2) styles */
+/* Heading 2 Styles */
 h2 {
-    font-size: 1.6em; /* Font size */
-    margin-top: 15px; /* Space above heading */
-    text-align: center; /* Center text */
+    /* Sets font size */
+    font-size: 1.6em;
+    /* Adds margin to the top */
+    margin-top: 15px;
+    /* Centers text horizontally */
+    text-align: center;
 }
 
-/* iFrame styles */
+/* Iframe Styles */
 iframe {
-    width: 100%; /* Full width */
-    height: 300px; /* Fixed height */
-    border: 1px solid #00c6ff; /* Light blue border */
-    border-radius: 5px; /* Rounded corners */
-    margin-top: 10px; /* Space above iframe */
-    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
-    overflow-x: hidden; /* Hide horizontal overflow */
+    /* Sets width to 100% of the parent element */
+    width: 100%;
+    /* Sets height */
+    height: 300px;
+    /* Sets border to 1px solid cyan */
+    border: 1px solid #00c6ff;
+    /* Adds rounded corners */
+    border-radius: 5px;
+    /* Adds margin to the top */
+    margin-top: 10px;
+    /* Sets background to semi-transparent black */
+    background: rgba(0, 0, 0, 0.7);
+    /* Hides horizontal scrollbar */
+    overflow-x: hidden;
 }
 
-/* Responsive styles for larger screens */
+/* Media Query for Larger Screens */
 @media (min-width: 768px) {
+    /* Container Styles for Larger Screens */
     .container {
-        padding: 20px; /* Increase padding */
+        /* Increases padding */
+        padding: 20px;
     }
 
+    /* Header Styles for Larger Screens */
     header {
-        padding: 20px 0; /* Increase vertical padding */
-        margin-bottom: 20px; /* Increase space below header */
+        /* Increases padding */
+        padding: 20px 0;
+        /* Increases margin to the bottom */
+        margin-bottom: 20px;
     }
 
+    /* Heading 1 Styles for Larger Screens */
     h1 {
-        font-size: 2.5em; /* Increase font size */
+        /* Increases font size */
+        font-size: 2.5em;
     }
 
+    /* Main Section Styles for Larger Screens */
     main {
-        padding: 20px; /* Increase padding */
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Increase shadow size */
+        /* Increases padding */
+        padding: 20px;
+        /* Increases box shadow */
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     }
 
+    /* Label Styles for Larger Screens */
     label {
-        font-size: 1.2em; /* Increase font size */
-        text-align: center; /* Center text */
+        /* Increases font size */
+        font-size: 1.2em;
+        /* Centers text horizontally */
+        text-align: center;
     }
 
+    /* Button Styles for Larger Screens */
     button {
-        font-size: 1.2em; /* Increase font size */
-        text-align: center; /* Center text */
+        /* Increases font size */
+        font-size: 1.2em;
+        /* Centers text horizontally */
+        text-align: center;
     }
 
+    /* Heading 2 Styles for Larger Screens */
     h2 {
-        font-size: 1.8em; /* Increase font size */
-        margin-top: 20px; /* Increase space above heading */
-        text-align: center; /* Center text */
+        /* Increases font size */
+        font-size: 1.8em;
+        /* Increases margin to the top */
+        margin-top: 20px;
+        /* Centers text horizontally */
+        text-align: center;
     }
 
+    /* Iframe Styles for Larger Screens */
     iframe {
-        height: 400px; /* Increase height */
+        /* Increases height */
+        height: 400px;
     }
 }
 
-/* Styles for the download menu */
+/* Download Menu Styles */
 .download-menu {
-    display: none; /* Hidden by default */
-    position: absolute; /* Absolute positioning */
-    top: 100%; /* Position below button */
-    left: 0; /* Align to left */
-    background-color: #333; /* Dark background */
-    border-radius: 5px; /* Rounded corners */
-    padding: 5px 0; /* Vertical padding */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Drop shadow */
-    z-index: 1; /* Bring to front */
-    min-width: 150px; /* Minimum width */
+    /* Hides the menu by default */
+    display: none;
+    /* Sets position to absolute */
+    position: absolute;
+    /* Positions the menu below the parent element */
+    top: 100%;
+    /* Aligns the menu to the left */
+    left: 0;
+    /* Sets background color */
+    background-color: #333;
+    /* Adds rounded corners */
+    border-radius: 5px;
+    /* Adds padding to the menu */
+    padding: 5px 0;
+    /* Adds box shadow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    /* Sets z-index for layering */
+    z-index: 1;
+    /* Sets minimum width */
+    min-width: 150px;
 }
 
-/* Download menu link styles */
+/* Download Menu Link Styles */
 .download-menu a {
-    display: block; /* Block layout */
-    padding: 10px 20px; /* Inner padding */
-    color: #ffffff; /* White text */
-    text-decoration: none; /* Remove underline */
-    transition: background 0.3s ease; /* Smooth background change */
+    /* Enables block display */
+    display: block;
+    /* Adds padding to the link */
+    padding: 10px 20px;
+    /* Sets text color to white */
+    color: #ffffff;
+    /* Removes text decoration */
+    text-decoration: none;
+    /* Adds transition effect for background color */
+    transition: background 0.3s ease;
 }
 
-/* Download menu link hover effect */
+/* Download Menu Link Hover Styles */
 .download-menu a:hover {
-    background-color: #555; /* Darker background on hover */
+    /* Changes background color on hover */
+    background-color: #555;
 }
 
-/* Loading indicator styles */
+/* Loading Indicator Styles */
 .loading-indicator {
-    display: none; /* Hidden by default */
-    text-align: center; /* Center text */
-    margin-top: 20px; /* Space above indicator */
-    color: #ffffff; /* White text */
+    /* Hides the indicator by default */
+    display: none;
+    /* Centers text horizontally */
+    text-align: center;
+    /* Adds margin to the top */
+    margin-top: 20px;
+    /* Sets text color to white */
+    color: #ffffff;
 }
-
